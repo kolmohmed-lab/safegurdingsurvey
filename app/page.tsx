@@ -126,7 +126,7 @@ export default function Home() {
     return (
       <main className="shell language-shell">
         <section className="language-card">
-          <div className="brand-row"><div className="brand-mark">DAIS</div><div className="brand-copy">Nord Anglia Education</div></div>
+          <div className="brand-row"><div className="brand-mark">DAIS</div></div>
           <h1>{copy.en.languageTitle}</h1>
           <p className="zh-title">{copy.zh.languageTitle}</p>
           <p className="language-help">{copy.en.languageHelp}<br />{copy.zh.languageHelp}</p>
@@ -145,7 +145,7 @@ export default function Home() {
     return (
       <main className="shell welcome-shell">
         <header className="wizard-topbar">
-          <div className="brand-row compact"><div className="brand-mark">DAIS</div><div className="brand-copy">Nord Anglia Education</div></div>
+          <div className="brand-row compact"><div className="brand-mark">DAIS</div></div>
           <button type="button" className="lang-link" onClick={() => setLang(null)}>{t.changeLanguage}</button>
         </header>
         <section className="welcome-card">
@@ -181,7 +181,7 @@ export default function Home() {
           <div className="check">✓</div>
           <h1>{t.thanksTitle}</h1>
           <p>{t.thanksText}</p>
-          <div className="brand-footer"><strong>DAIS</strong><span>Nord Anglia Education</span></div>
+          <div className="brand-footer"><strong>DAIS</strong></div>
         </section>
       </main>
     );
@@ -210,7 +210,7 @@ export default function Home() {
   return (
     <main className="shell wizard-shell">
       <header className="wizard-topbar">
-        <div className="brand-row compact"><div className="brand-mark">DAIS</div><div className="brand-copy">Nord Anglia Education</div></div>
+        <div className="brand-row compact"><div className="brand-mark">DAIS</div></div>
         <button type="button" className="lang-link" onClick={() => setLang(null)}>{t.changeLanguage}</button>
       </header>
 
