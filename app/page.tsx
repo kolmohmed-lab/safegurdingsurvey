@@ -12,8 +12,6 @@ const copy = {
     title: "Safeguarding Survey",
     school: "Dalian American International School",
     intro: "Thank you for taking a few moments to share your experience. Your feedback helps us maintain a safe, secure and welcoming environment for every student and visitor on campus.",
-    required: "Required",
-    progress: "Progress",
     next: "Next",
     back: "Back",
     start: "Start survey",
@@ -36,8 +34,6 @@ const copy = {
     title: "安全保护问卷",
     school: "大连美国国际学校",
     intro: "感谢您抽出几分钟分享您的体验。您的反馈将帮助我们为每一位学生和访客营造安全、安心且友好的校园环境。",
-    required: "必填",
-    progress: "完成进度",
     next: "下一题",
     back: "返回",
     start: "开始问卷",
@@ -131,13 +127,12 @@ export default function Home() {
       <main className="shell language-shell">
         <section className="language-card">
           <div className="brand-row"><div className="brand-mark">DAIS</div><div className="brand-copy">Nord Anglia Education</div></div>
-          <div className="language-icon" aria-hidden="true">文</div>
           <h1>{copy.en.languageTitle}</h1>
           <p className="zh-title">{copy.zh.languageTitle}</p>
           <p className="language-help">{copy.en.languageHelp}<br />{copy.zh.languageHelp}</p>
           <div className="language-buttons">
-            <button onClick={() => setLang("en")} className="language-button"><span>EN</span><strong>English</strong></button>
-            <button onClick={() => setLang("zh")} className="language-button"><span>中</span><strong>中文</strong></button>
+            <button onClick={() => setLang("en")} className="language-button"><strong>English</strong></button>
+            <button onClick={() => setLang("zh")} className="language-button"><strong>中文</strong></button>
           </div>
         </section>
       </main>
@@ -157,7 +152,7 @@ export default function Home() {
           <div className="eyebrow dark">{t.school}</div>
           <h1>{t.title}</h1>
           <p>{t.intro}</p>
-          <button className="primary-button" onClick={() => setStarted(true)}>{t.start} <span>→</span></button>
+          <button className="primary-button" onClick={() => setStarted(true)}>{t.start}</button>
         </section>
       </main>
     );
@@ -231,18 +226,16 @@ export default function Home() {
             <>
               <div className="question-title-row">
                 <h1>{currentQuestion[lang]}</h1>
-                <span className="required">{t.required}</span>
               </div>
 
               <div className="typeform-options">
-                {currentQuestion.options.map(([value, en, zh], index) => (
+                {currentQuestion.options.map(([value, en, zh]) => (
                   <button
                     type="button"
                     key={value}
                     onClick={() => choose(value)}
                     className={`typeform-option ${answers[currentQuestion.id] === value ? "selected" : ""}`}
                   >
-                    <span className="option-key">{String.fromCharCode(65 + index)}</span>
                     <span className="option-text">{lang === "en" ? en : zh}</span>
                     <span className="option-check">✓</span>
                   </button>
@@ -251,7 +244,7 @@ export default function Home() {
 
               {requiresDetails && (
                 <label className="typeform-details">
-                  <span>{t.details} *</span>
+                  <span>{t.details}</span>
                   <textarea
                     autoFocus
                     rows={4}
@@ -279,7 +272,7 @@ export default function Home() {
             {isSuggestionStep ? (
               <button className="primary-button" disabled={status === "submitting"} type="submit">{status === "submitting" ? t.submitting : t.submit}</button>
             ) : (
-              <button type="button" className="primary-button" onClick={next} disabled={!canContinue}>{t.next} →</button>
+              <button type="button" className="primary-button" onClick={next} disabled={!canContinue}>{t.next}</button>
             )}
           </div>
         </section>
