@@ -10,7 +10,7 @@ const copy = {
     languageTitle: "Choose your language",
     languageHelp: "Please select a language to begin the safeguarding survey.",
     title: "Safeguarding Survey",
-    school: "Dalian American International School",
+    school: "DAIS and DHS",
     intro: "Thank you for taking a few moments to share your experience. Your feedback helps us maintain a safe, secure and welcoming environment for every student and visitor on campus.",
     next: "Next",
     back: "Back",
@@ -32,7 +32,7 @@ const copy = {
     languageTitle: "请选择语言",
     languageHelp: "请选择一种语言开始填写安全保护问卷。",
     title: "安全保护问卷",
-    school: "大连美国国际学校",
+    school: "DAIS 和 DHS",
     intro: "感谢您抽出几分钟分享您的体验。您的反馈将帮助我们为每一位学生和访客营造安全、安心且友好的校园环境。",
     next: "下一题",
     back: "返回",
@@ -126,7 +126,7 @@ export default function Home() {
     return (
       <main className="shell language-shell">
         <section className="language-card">
-          <div className="brand-row"><div className="brand-mark">DAIS</div></div>
+          <div className="brand-row"><div className="brand-mark">DAIS • DHS</div></div>
           <h1>{copy.en.languageTitle}</h1>
           <p className="zh-title">{copy.zh.languageTitle}</p>
           <p className="language-help">{copy.en.languageHelp}<br />{copy.zh.languageHelp}</p>
@@ -145,7 +145,7 @@ export default function Home() {
     return (
       <main className="shell welcome-shell">
         <header className="wizard-topbar">
-          <div className="brand-row compact"><div className="brand-mark">DAIS</div></div>
+          <div className="brand-row compact"><div className="brand-mark">DAIS • DHS</div></div>
           <button type="button" className="lang-link" onClick={() => setLang(null)}>{t.changeLanguage}</button>
         </header>
         <section className="welcome-card">
@@ -181,7 +181,7 @@ export default function Home() {
           <div className="check">✓</div>
           <h1>{t.thanksTitle}</h1>
           <p>{t.thanksText}</p>
-          <div className="brand-footer"><strong>DAIS</strong></div>
+          <div className="brand-footer"><strong>DAIS • DHS</strong></div>
         </section>
       </main>
     );
@@ -210,7 +210,7 @@ export default function Home() {
   return (
     <main className="shell wizard-shell">
       <header className="wizard-topbar">
-        <div className="brand-row compact"><div className="brand-mark">DAIS</div></div>
+        <div className="brand-row compact"><div className="brand-mark">DAIS • DHS</div></div>
         <button type="button" className="lang-link" onClick={() => setLang(null)}>{t.changeLanguage}</button>
       </header>
 
