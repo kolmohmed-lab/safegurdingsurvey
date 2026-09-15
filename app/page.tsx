@@ -43,11 +43,11 @@ const copy = {
     details: "请提供更多信息",
     detailsPlaceholder: "请在此填写详细信息……",
     suggestionPlaceholder: "请在此分享您的建议……",
-    optional: "选填",
+    optional: "可选填",
     question: "问题",
     of: "/",
     thanksTitle: "感谢您的反馈",
-    thanksText: "您的安全保护问卷已成功提交。",
+    thanksText: "您的学生安全保护问卷已成功提交。",
     submitError: "提交失败，请重试或联系学校工作人员。",
   },
 };
@@ -56,13 +56,13 @@ const questions = [
   {
     id: "q1",
     en: "Were you greeted and signed in appropriately upon arrival?",
-    zh: "您到校时是否得到了适当的接待并完成访客登记？",
+    zh: "您到校时是否得到了接待并完成访客登记？",
     options: [["yes", "Yes", "是"], ["no", "No", "否"]],
   },
   {
     id: "q2",
     en: "Were you asked to wear your visitor badge around your neck at all times?",
-    zh: "您是否被提醒在校期间始终佩戴访客证？",
+    zh: "您是否被提醒在访校期间始终佩戴访客证？",
     options: [["yes", "Yes", "是"], ["no", "No", "否"]],
   },
   {
@@ -87,7 +87,7 @@ const questions = [
   {
     id: "q5",
     en: "Did you observe any concerning behavior or situations during your time on campus?",
-    zh: "您在校期间是否观察到任何令人担忧的行为或情况？",
+    zh: "您在访校期间是否观察到任何令人担忧的行为或情况？",
     options: [["yes", "Yes", "是"], ["no", "No", "否"]],
     detailsWhen: "yes",
   },
@@ -100,7 +100,7 @@ const questions = [
   {
     id: "q7",
     en: "How would you rate your overall experience in relation to campus safety and student safeguarding?",
-    zh: "您如何评价本次体验中校园安全和学生保护方面的整体情况？",
+    zh: "您如何评价本次校园访问期间校园安全和学生保护方面的整体情况？",
     options: [
       ["excellent", "Excellent", "优秀"],
       ["good", "Good", "良好"],
